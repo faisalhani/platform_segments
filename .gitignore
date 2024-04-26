@@ -20,3 +20,31 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+# Ignore compiled Python files
+*.pyc
+__pycache__
+
+# Ignore the virtual environment directory
+venv/
+env/
+
+# Ignore local development settings
+*.sqlite3
+*.pyc
+
+# Ignore Django migration files
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Ignore secret keys and sensitive information
+*.env
+*.ini
+*.key
+
+# Ignore static files and media uploads (optional, if using a CDN or separate storage)
+staticfiles/
+media/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
