@@ -48,3 +48,5 @@ media/
 # Ignore logs and temporary files
 *.log
 *.tmp
+
+*.pem

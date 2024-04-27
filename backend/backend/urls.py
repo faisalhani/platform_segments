@@ -16,8 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from snapchat_Segments import urls as snapchat_Segments_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/', include('snapchat_segments.urls')),  # Include app-specific URLs
+    path('', include('snapchat_Segments.urls')),
+    path('accounts/', include('accounts.urls')),
+  # Include app-specific URLs for the root URL
 ]

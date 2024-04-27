@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'snapchat_segments',
+    'snapchat_Segments',
+    'sslserver',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -127,11 +129,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Snapchat access token
 # Specify the path to the .env file
-dotenv_path = '/absolute/path/to/your/.env'
-
+dotenv_path = os.path.join(BASE_DIR , '.env')
+print(dotenv_path)
 # Load environment variables from the .env file
 load_dotenv(dotenv_path)
 
 # Access Snapchat API credentials from environment variables
 SNAPCHAT_CLIENT_ID = os.getenv('SNAPCHAT_CLIENT_ID')
 SNAPCHAT_CLIENT_SECRET = os.getenv('SNAPCHAT_CLIENT_SECRET')
+SNAPCHAT_REDIRECT_URI = os.getenv('SNAPCHAT_REDIRECT_URI')
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
